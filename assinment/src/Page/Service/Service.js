@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Service = () => {
      return (
        
-               <Row xs={1} md={2} className="g-4 mt-4">
+               <Row xs={1} md={2} className="g-4 mt-5">
   {Array.from({ length: 4 }).map((_, idx) => (
     <Col>
       <Card>
@@ -17,11 +18,14 @@ const Service = () => {
           </Card.Text>
         </Card.Body>
       </Card>
+      <Link to='/checkout'>
+      <button className='btn btn-primary '>Go Check Out</button>
+      </Link>
     </Col>
   ))}
 </Row>
      
-     );
-};
+     
+     )};
 
 export default Service;
