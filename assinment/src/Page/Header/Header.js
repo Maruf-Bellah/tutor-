@@ -16,7 +16,7 @@ const Header = () => {
           <div className='container'>
             <Navbar bg="light" expand="lg">
   <Container fluid>
-    <Navbar.Brand as={Link} to="/home">Navbar scroll</Navbar.Brand>
+    <Navbar.Brand as={Link} to="/home">Home Tutor</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
         {/* <Nav.Link as={Link} to="/">Home</Nav.Link> */}
