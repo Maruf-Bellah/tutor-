@@ -14,7 +14,7 @@ const SocilalLogin = () => {
      if (error) {
            errorElement = <p className='text-danger'>Error: {error.message}</p>
         }
-        
+
         if(user){
              navigate('/home')
         }
@@ -24,7 +24,7 @@ const SocilalLogin = () => {
     
           <button 
           onClick={() => signInWithGoogle ()}
-          className='btn btn-outline-primary mt-2'>
+          className='btn btn-outline-primary mt-2 w-50'>
           <img src={logo} alt="" />
                Google Sign in
           </button>

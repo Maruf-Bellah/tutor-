@@ -1,7 +1,7 @@
 
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
@@ -16,13 +16,21 @@ const Login = () => {
      const location = useLocation();
 
      let from = location.state?.from?.pathname || "/home";
-
      const [
           signInWithEmailAndPassword,
           user,
           loading,
           error,
         ] = useSignInWithEmailAndPassword(auth);
+
+        const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+        const resetPassword = async() =>{
+          const email = emailRef.current.value;
+          await sendPasswordResetEmail(email);
+          alert('Sent email');
+     }
+
 
         if(loading){
              <Loading></Loading>
@@ -58,15 +66,26 @@ const Login = () => {
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
     <Form.Control ref={passwordRef} type="password" required placeholder="Password" />
+
   </Form.Group>
-  <Link to='/register' className='text-decoration-none'>
-       <button className='btn btn-link text-decoration-none'>Go to Regiser</button>
- </Link>
- <br></br>
           {errorElement}
-  <Button onClick={() => signInWithEmailAndPassword()} variant="primary" type="submit">
+  <Button className='w-50' onClick={() => signInWithEmailAndPassword()} variant="primary" type="submit">
     Login
-  </Button>
+  </Button> 
+
+ <div>
+ <span>  Are you want to read ?</span> 
+  <Link to='/register' className='text-decoration-none'>
+  <button className='btn btn-link text-decoration-none'>Please Regiser</button>
+ </Link>
+ </div>
+
+ <div>
+ <span>  Forget your Password?</span> 
+  <Link to='/register' className='text-decoration-none'>
+  <button className='btn btn-link text-decoration-none ' onClick={resetPassword}>Reset Password</button>
+ </Link>
+ </div>
 </Form>
 
 <SocilalLogin></SocilalLogin>

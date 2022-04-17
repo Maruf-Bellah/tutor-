@@ -22,9 +22,6 @@ const Register = () => {
      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
      const navigate = useNavigate()
 
-     if(loading){
-          return <Loading></Loading>
-     }
 
      if(user) {
          navigate('/home')
@@ -64,12 +61,8 @@ const Register = () => {
                          <Form.Label>Confirm Password</Form.Label>
                          <Form.Control ref={passwordRef} type="password" required placeholder="Password" />
                     </Form.Group>
-                    
-                
-                         <Link to='/login' className='text-decoration-none'>
-                          <button className='btn btn-link text-decoration-none'>Go to Login</button>
-                         </Link>
-                          <br />
+                     <Form.Group></Form.Group>
+                         <br />
                          {errorElement}
 
                     <Button variant="primary" type="submit"
@@ -77,6 +70,11 @@ const Register = () => {
                     >
                          Register
                     </Button>
+                    <br />
+                    <span className='mt-1'>If you are Registered</span>
+                         <Link to='/login' className='text-decoration-none'>
+                          <button className='btn btn-link text-decoration-none'>Please Login</button>
+                         </Link>
                </Form>
                <SocilalLogin></SocilalLogin>
 
