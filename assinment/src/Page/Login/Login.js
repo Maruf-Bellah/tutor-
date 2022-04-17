@@ -2,14 +2,20 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
+import SocilalLogin from './SocialLogin/SocilalLogin';
+
 
 
 const Login = () => {
      const emailRef = useRef('');
      const passwordRef = useRef('');
      const navigate = useNavigate()
+     const location = useLocation();
+
+     let from = location.state?.from?.pathname || "/home";
 
      const [
           signInWithEmailAndPassword,
@@ -18,6 +24,10 @@ const Login = () => {
           error,
         ] = useSignInWithEmailAndPassword(auth);
 
+        if(loading){
+             <Loading></Loading>
+        }
+
      const handleSubmitLogin = event =>{
           event.preventDefault();
           const email = emailRef.current.value;
@@ -25,9 +35,15 @@ const Login = () => {
           signInWithEmailAndPassword(email, password);
      }
 
+
      if(user){
-          navigate('/home')
+          navigate(from, { replace: true })
+          // navigate('/home');
      }
+     let errorElement;
+        if (error) {
+            errorElement = <p className='text-danger'>Error: {error.message}</p>
+        }
 
      return (
           <div className='w-50 mx-auto'>
@@ -36,22 +52,24 @@ const Login = () => {
 <Form onSubmit={handleSubmitLogin}>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
-    <Form.Control ref={emailRef} type="email" placeholder="Enter email" />
+    <Form.Control ref={emailRef} type="email" required placeholder="Enter email" />
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
-    <Form.Control ref={passwordRef} type="password" placeholder="Password" />
+    <Form.Control ref={passwordRef} type="password" required placeholder="Password" />
   </Form.Group>
-  <button  className='btn-link btn'>
-       <Link to='/register'>
-       Go to Register 
-       </Link>
- </button> <br></br>
+  <Link to='/register' className='text-decoration-none'>
+       <button className='btn btn-link text-decoration-none'>Go to Regiser</button>
+ </Link>
+ <br></br>
+          {errorElement}
   <Button onClick={() => signInWithEmailAndPassword()} variant="primary" type="submit">
     Login
   </Button>
 </Form>
+
+<SocilalLogin></SocilalLogin>
 
           </div>
      );

@@ -27,7 +27,7 @@ const Header = () => {
         navbarScroll
       >
 {  user ? 
-     <button onClick={handleSignOut}>Sign Out</button>
+     <button className='btn btn-link text-decoration-none' onClick={handleSignOut}>Sign Out</button>
      :
 
 <Nav.Link as={Link} to="/login">Login</Nav.Link>}
