@@ -18,13 +18,7 @@ const Header = () => {
             <Navbar  expand="lg">
   <Container fluid>
   <Navbar.Brand as={Link} to="/home">
-      <img
-        src={logo}
-        width="150"
-        height="70"
-        className="d-inline-block align-top"
-        alt="React Bootstrap logo"
-      />
+     <h3 className='text-primary'>Tutor</h3>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
@@ -45,7 +39,7 @@ const Header = () => {
      <button className='btn btn-link text-decoration-none' onClick={handleSignOut}>Sign Out</button>
      :
 
-<Nav.Link as={Link} to="/log">Blog</Nav.Link>}
+<Nav.Link as={Link} to="/login">Login</Nav.Link>}
       </Nav>
     </Navbar.Collapse>
   </Container>

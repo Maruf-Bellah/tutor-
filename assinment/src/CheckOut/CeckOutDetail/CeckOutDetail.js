@@ -6,7 +6,7 @@ import './CeckOutDetail.css';
 const CeckOutDetail = ({ student }) => {
      const {home,mobile, name, img, post, people } = student;
      return (
-          <div>
+          <div className=' '>
 
                <div className="card mb-3" >
                     <div className="row g-0">

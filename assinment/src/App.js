@@ -11,6 +11,7 @@ import Blog from './Page/Blog/Blog';
 import About from './Page/About/About';
 import ServiceDetail from './Page/Service/ServiceDetail/ServiceDetail';
 import Footer from './Page/Footer/Footer'
+import NotFound from './Page/NotFound/NotFound';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
            <CheckOut></CheckOut>
          </RequireAuth>
        }></Route>
+       <Route path='*' element={<NotFound></NotFound>}></Route>
      </Routes>
      <Footer></Footer>
     </div>

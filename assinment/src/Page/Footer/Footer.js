@@ -5,7 +5,7 @@ const Footer = () => {
      return (
           <div>
              
-             <div  className='footer bg-secondary text-white mt-4'>
+             <div  className='footer bg-dark text-white mt-4'>
                   <div>
                        <h5>Home Tutor</h5>
                        <p>Great lesson ideas and lesson plans for ESL teachers! I can best customize the lesson plans.</p>
