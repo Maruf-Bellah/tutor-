@@ -20,6 +20,9 @@ const Header = () => {
   <Navbar.Brand as={Link} to="/home">
      <h3 className='text-primary'>Tutor</h3>
     </Navbar.Brand>
+  <Navbar.Brand as={Link} to="/checkout">
+      <small>    Students</small>
+    </Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
         {/* <Nav.Link as={Link} to="/">Home</Nav.Link> */}

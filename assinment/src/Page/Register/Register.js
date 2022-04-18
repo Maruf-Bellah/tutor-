@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocilalLogin from '../Login/SocialLogin/SocilalLogin';
-import Loading from '../Loading/Loading';
+
 
 
 const Register = () => {
@@ -17,7 +17,7 @@ const Register = () => {
      const [
           createUserWithEmailAndPassword,
           user,
-          error
+          error,
      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
      const navigate = useNavigate()
 
@@ -29,9 +29,8 @@ const Register = () => {
 
         let errorElement;
         if (error) {
-            errorElement = <p className='text-danger'>Error: {error?.message}</p>
+            errorElement = <p className='text-danger'>Error: {error.message}</p>
         }
-
 
      const handleSubmitRegister = event => {
           event.preventDefault();
@@ -47,21 +46,22 @@ const Register = () => {
 
                <Form onSubmit={handleSubmitRegister}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                         <Form.Label>Email address</Form.Label>
+
                          <Form.Control ref={emailRef} type="email" required placeholder="Enter email" />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                         <Form.Label>Password</Form.Label>
+                      
                          <Form.Control ref={passwordRef} type="password" required placeholder="Password" />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                         <Form.Label>Confirm Password</Form.Label>
-                         <Form.Control ref={passwordRef} type="password" required placeholder="Password" />
+                      
+                         <Form.Control ref={passwordRef} type="password" required placeholder=" Password" />
                     </Form.Group>
                      <Form.Group></Form.Group>
                          <br />
+
                          {errorElement}
 
                     <Button variant="primary" type="submit"

@@ -1,9 +1,12 @@
  .header-body img{
-     /* filter: blur(2px); */
+     filter: blur(2px);
        filter: drop-shadow(50px 50px 100px rgb(34, 6, 6));
-
      transition-property: opacity;
-     opacity: 1;
+     opacity: 4;
      color: rgb(168, 158, 158);
 
 } 
+img{
+    opacity: 4px;
+  
+}
