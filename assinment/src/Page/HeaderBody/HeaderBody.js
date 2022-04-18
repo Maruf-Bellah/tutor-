@@ -8,7 +8,7 @@ import pic3 from './slider-1.jpg';
 
 const HeaderBody = () => {
      return (
-          <div className='header-body'>
+          <div className='header-body '>
                <Carousel>
   <Carousel.Item>
     <img style={{height: '500px'}}
@@ -16,12 +16,12 @@ const HeaderBody = () => {
       src={pic1}
       alt="First slide"
     />
-    <Carousel.Caption>
+    <Carousel.Caption  className='text-primary'>
       <h1>Wellcome to my</h1>
       <h1>Home Totur Website !</h1>
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
       <p>Nulla vitae elit libero, a pharetra augue mollis  pharetra augue mollis interdum.</p>
-      <button className='btn btn-primary'>Read more ..</button>
+      <button className='btn btn-warning'>Read more ..</button>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -31,7 +31,7 @@ const HeaderBody = () => {
       alt="Second slide"
     />
 
-    <Carousel.Caption>
+    <Carousel.Caption className='text'>
     <h1>Wellcome to my</h1>
       <h1>Home Totur Website !</h1>
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -46,7 +46,7 @@ const HeaderBody = () => {
       alt="Third slide"
     />
 
-    <Carousel.Caption>
+    <Carousel.Caption className='text'>
     <h1>Wellcome to my</h1>
       <h1>Home Totur Website !</h1>
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>

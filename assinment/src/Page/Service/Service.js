@@ -23,7 +23,7 @@ const Service = () => {
   ];
      return (
         <div>
-          <h3 className=' py-5 my-4 text-center text-primary'>All The Students Are Here </h3>
+          <h3 className=' pb-5 mb-4 text-center text-primary'>All The Students Are Here </h3>
         <div  className='service container'>
         {
             students.map(student=> <Student 

@@ -23,9 +23,9 @@ const Slider = () => {
       alt="First slide"
     />
       </div>
-     <div className='text-center'>
-       <h3>Sultana khatun</h3>
-         <p >I am reading online to this sir in Corona, </p>
+      <div className='text-center line'>
+    <h3>Sultana Khondokar</h3>
+         <p>I am reading online to this sir in Corona, </p>
          <p>now I am working in a good place, so I have benefited a lot from reading this sir.</p>
     </div>
 
@@ -40,9 +40,9 @@ const Slider = () => {
       alt="Third slide"
     />
       </div>
-    <div className='text-center'>
+    <div className='text-center line'>
     <h3>Abrar Khondokar</h3>
-         <p >I am reading online to this sir in Corona, </p>
+         <p>I am reading online to this sir in Corona, </p>
          <p>now I am working in a good place, so I have benefited a lot from reading this sir.</p>
     </div>
    
@@ -55,7 +55,7 @@ const Slider = () => {
       alt="fourth slide"
     />
       </div>
-    <div className='text-center'>
+    <div className='text-center  line'>
     <h3>Masum Bellah</h3>
          <p >I am reading online to this sir in Corona, </p>
          <p>now I am working in a good place, so I have benefited a lot from reading this sir.</p>
@@ -70,7 +70,7 @@ const Slider = () => {
       alt="fivth slide"
     />
       </div>
-    <div className='text-center'>
+    <div className='text-center line'>
     <h3>Maimuna khatun</h3>
          <p >I am reading online to this sir in Corona, </p>
          <p>now I am working in a good place, so I have benefited a lot from reading this sir.</p>
