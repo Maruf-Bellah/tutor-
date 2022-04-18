@@ -1,0 +1,7 @@
+ .header-body img{
+     /* filter: blur(2px); */
+     transition-property: opacity;
+     opacity: 1;
+     color: rgb(168, 158, 158);
+
+} 

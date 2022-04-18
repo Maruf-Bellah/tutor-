@@ -1,29 +1,45 @@
 import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Student from '../Student/Student';
+import './Service.css';
 
 const Service = () => {
+  const students = [
+    {id:1, people: 'Science student', img: 'https://bdevs.net/wp/educal/wp-content/uploads/2021/09/course12.jpg', post: 'Students of any level can study here, but the condition is that you have to work hard to study here, and if you keep trying with all your might, you will get the result, and we will give you as many guidelines as you need, we ask you for one. That is hard work', address: {
+      name: 'Alamain Howlader',
+      home: 'Dhaka , Mirpur',
+      mobile: '021234354545'
+    }},
+    {id:2, people: 'Humanities students', img: 'https://bdevs.net/wp/educal/wp-content/uploads/2021/09/course11.jpg', post: 'Students of any level can study here, but the condition is that you have to work hard to study here, and if you keep trying with all your might, you will get the result, and we will give you as many guidelines as you need, we ask you for one. That is hard work', address: {
+      name: 'Alamain Howlader',
+      home: 'Dhaka , Mirpur',
+      mobile: '021234354545'
+    }},
+    {id:3, people: 'Commerce student', img: 'https://bdevs.net/wp/educal/wp-content/uploads/2021/09/course10.png', post: 'Students of any level can study here, but the condition is that you have to work hard to study here, and if you keep trying with all your might, you will get the result, and we will give you as many guidelines as you need, we ask you for one. That is hard work', address: {
+      name: 'Alamain Howlader',
+      home: 'Dhaka , Mirpur',
+      mobile: '021234354545'
+    }}
+  
+  ]
      return (
-       
-               <Row xs={1} md={2} className="g-4 mt-5">
-  {Array.from({ length: 4 }).map((_, idx) => (
-    <Col>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a longer card with supporting text below as a natural
-            lead-in to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Link to='/checkout'>
-      <button className='btn btn-primary '>Go Check Out</button>
-      </Link>
-    </Col>
-  ))}
-</Row>
+        <div>
+          <h3 className=' py-4 text-center'>All Student here </h3>
+        <div  className='service container'>
+        {
+            students.map(student=> <Student 
+            
+              key={student.id}
+              student={student}
+
+              
+            ></Student>)
+          }
+        </div>
+         
+     
+        </div>
      
      
      )};

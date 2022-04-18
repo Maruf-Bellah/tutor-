@@ -1,0 +1,18 @@
+.service{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     justify-content: center;
+     grid-gap: 30px;
+}
+
+
+@media screen and (max-width: 768px){
+     .service{
+       grid-template-columns: repeat(2, 1fr);
+     }
+}
+@media screen and (max-width: 576px) {
+     .service{
+       grid-template-columns: repeat(1, 1fr);
+     }
+}

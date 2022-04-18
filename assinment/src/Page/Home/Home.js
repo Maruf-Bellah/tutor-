@@ -1,14 +1,16 @@
 import React from 'react';
-import Footer from '../Footer/Footer';
+
+import HeaderBody from '../HeaderBody/HeaderBody';
 import Service from '../Service/Service';
 import Slider from '../Slider/Slider';
 
 const Home = () => {
      return (
-          <div className='container'>
-               <Slider></Slider>
+          <div className='container-fluid'>
+               <HeaderBody></HeaderBody>
                <Service></Service>
-               <Footer></Footer>
+               <Slider></Slider>
+          
           </div>
      );
 };

@@ -1,0 +1,21 @@
+.footer {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-gap: 10px;
+     align-items: center;
+     padding: 20px 10px;
+}
+.footer input{
+     padding: 5px;
+     
+}
+@media screen and (max-width: 768px) {
+     .footer{
+       grid-template-columns: repeat(2, 1fr);
+     }
+}
+@media screen and (max-width: 576px) {
+     .footer{
+       grid-template-columns: repeat(1, 1fr);
+     }
+}
