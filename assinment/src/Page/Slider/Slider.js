@@ -11,7 +11,7 @@ import pik6 from './nicolas-horn-MTZTGvDsHFY-unsplash.jpg'
 const Slider = () => {
      return (
         <div>
-          <h2 className='text-primary text-center my-5 py-3'>Successfull Students</h2>
+          <h2  style={{fontWeight: 'bold'}} className='text-primary text-center my-5 py-3'>Successfull Students</h2>
               
       <div className='bg-light container my-5' style={{height: '500px'}}>
         <Carousel>
@@ -24,7 +24,7 @@ const Slider = () => {
     />
       </div>
       <div className='text-center line'>
-    <h3>Sultana Khondokar</h3>
+    <h4>Sultana Khondokar</h4>
          <p>I am reading online to this sir in Corona, </p>
          <p>now I am working in a good place, so I have benefited a lot from reading this sir.</p>
     </div>
@@ -41,7 +41,7 @@ const Slider = () => {
     />
       </div>
     <div className='text-center line'>
-    <h3>Abrar Khondokar</h3>
+    <h4>Abrar Khondokar</h4>
          <p>I am reading online to this sir in Corona, </p>
          <p>now I am working in a good place, so I have benefited a lot from reading this sir.</p>
     </div>
@@ -56,7 +56,7 @@ const Slider = () => {
     />
       </div>
     <div className='text-center  line'>
-    <h3>Masum Bellah</h3>
+    <h4>Masum Bellah</h4>
          <p >I am reading online to this sir in Corona, </p>
          <p>now I am working in a good place, so I have benefited a lot from reading this sir.</p>
     </div>
@@ -71,7 +71,7 @@ const Slider = () => {
     />
       </div>
     <div className='text-center line'>
-    <h3>Maimuna khatun</h3>
+    <h4>Maimuna khatun</h4>
          <p >I am reading online to this sir in Corona, </p>
          <p>now I am working in a good place, so I have benefited a lot from reading this sir.</p>
     </div>

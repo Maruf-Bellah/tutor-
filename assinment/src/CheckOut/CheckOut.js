@@ -23,7 +23,7 @@ const CheckOut = () => {
   
      return (
           <div className='container'>
-                <h3 className="text-center text-primary">Student Information </h3>
+                <h3  style={{fontWeight: 'bold'}} className="text-center text-primary">Student Information </h3>
                <div className="check-out">
                     {
                          students.map(student => <CeckOutDetail

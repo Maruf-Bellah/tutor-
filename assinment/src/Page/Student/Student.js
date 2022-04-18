@@ -26,7 +26,7 @@ const Student = ({student}) => {
                     {/* <button onClick={() => navigatServieDetails(img) }>Details</button> */}
 
                     <Link to='/checkout'>
-                         <button className='btn btn-primary '>Go Check Out</button>
+                         <button  style={{fontWeight: 'bold'}} className='btn btn-primary '>Go Check Out</button>
                     </Link>
                     </div>
                </div>

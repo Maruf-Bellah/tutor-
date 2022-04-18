@@ -1,13 +1,19 @@
  .header-body img{
-     filter: blur(5px);
+     /* filter: blur(5px);
        filter: drop-shadow(10px 10px 10px rgb(34, 6, 6));
      transition-property: opacity;
-     opacity: .6;
+     opacity: .6; */
+
+     filter: brightness(50%) ;
 
      color: rgb(199, 25, 176);
     
 
 } 
 .header-body{
-   line-height: 13px;
+   /* line-height: 9px; */
+   font-weight: bold;
+}
+.header-body h1{
+  /* line-height: 0px; */
 }

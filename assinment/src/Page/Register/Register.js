@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
 import './Register.css';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Col, Form, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocilalLogin from '../Login/SocialLogin/SocilalLogin';
+import pic from './postattendee-demo.gif';
 
 
 
@@ -17,7 +18,7 @@ const Register = () => {
      const [
           createUserWithEmailAndPassword,
           user,
-          error,
+         
      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
      const navigate = useNavigate()
 
@@ -27,10 +28,7 @@ const Register = () => {
         }
 
 
-        let errorElement;
-        if (error) {
-            errorElement = <p className='text-danger'>Error: {error.message}</p>
-        }
+        
 
      const handleSubmitRegister = event => {
           event.preventDefault();
@@ -41,9 +39,13 @@ const Register = () => {
 
 
      return (
-          <div className='w-50 mx-auto'>
-               <h4>This is Register</h4>
 
+               <Row className='container mx-auto register'>
+                    <h2 style={{fontWeight: 'bold'}} className='text-center text-primary mt-5'>Plese Register My Website</h2>
+          
+                    <Col md={6}>
+                    <div className='w-100 '>
+              
                <Form onSubmit={handleSubmitRegister}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
 
@@ -62,9 +64,9 @@ const Register = () => {
                      <Form.Group></Form.Group>
                          <br />
 
-                         {errorElement}
+                      
 
-                    <Button variant="primary" type="submit"
+                    <Button className='w-50' variant="primary" type="submit"
                          onClick={() => createUserWithEmailAndPassword()}
                     >
                          Register
@@ -78,6 +80,12 @@ const Register = () => {
                <SocilalLogin></SocilalLogin>
 
           </div>
+                    </Col>
+                    <Col md={6}>
+                         <img className='img-fluid' src={pic} alt="" />
+                    </Col>
+               </Row>
+       
      );
 };
 

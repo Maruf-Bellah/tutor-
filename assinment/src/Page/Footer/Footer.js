@@ -8,22 +8,25 @@ const Footer = () => {
              <div  className='footer bg-dark text-white mt-4'>
                   <div>
                        <h5>Home Tutor</h5>
-                       <p>Great lesson ideas and lesson plans for ESL teachers! I can best customize the lesson plans.</p>
+                       <p>If you like to come here once and see, you and your son and daughter will come to study with me, just visit once</p>
+                        <p>Mobile : 0243494589</p>
+                        <p><small>mdmaruf5511507@gmail.com</small></p>
+
                   </div>
                   <div>
-                       <h5>Lessons</h5>
+                       <h5 className='ms-4'>All Subject</h5>
                        <ul>
-                            <li>Bangla</li>
-                            <li>English</li>
-                            <li>Math</li>
-                            <li>History</li>
-                            <li>Arabic</li>
-                            <li>Islamic</li>
-                            <li>Hadid</li>
+                            <li>Bangla Subject</li>
+                            <li>English Subject</li>
+                            <li>Math Subject</li>
+                            <li>History Subject</li>
+                            <li>Arabic Subject</li>
+                            <li>Islamic Subject</li>
+                            <li>Hadid Subject</li>
                        </ul>
                   </div>
                   <div>
-                       <h5>Free Time</h5>
+                       <h5 className='ms-4'>Free Time</h5>
                        <ul>
                             <li>Morming 9.30</li>
                             <li>Noon 6.50</li>
@@ -35,6 +38,7 @@ const Footer = () => {
                        </ul>
                   </div>
                   <div>
+                       <h4 >Subscribe</h4>
                        <p>
                             <input type="text" />
                             <input type="submit" value="Go now" />

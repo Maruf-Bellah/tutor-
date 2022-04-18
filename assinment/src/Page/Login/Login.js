@@ -1,6 +1,6 @@
 
 import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Col, Form, Row } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -8,6 +8,8 @@ import Loading from '../Loading/Loading';
 import SocilalLogin from './SocialLogin/SocilalLogin';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import pic from './postattendee-demo.gif';
+import './Login.css';
 
 
 
@@ -64,9 +66,11 @@ const Login = () => {
         }
 
      return (
-          <div className='w-50 mx-auto'>
-               <h4>This is Login</h4>
-
+          <Row className='container d-flex align-items-center mx-auto justify-content-center login'>
+               <h2 style={{fontWeight: 'bold'}} className='text-center text-primary'>Please Login My Website</h2>
+               <Col md={6} >
+               <div className='w-100'>
+     
 <Form onSubmit={handleSubmitLogin}>
   <Form.Group className="mb-3" controlId="formBasicEmail">
 
@@ -102,6 +106,12 @@ const Login = () => {
 <ToastContainer />
 
           </div>
+               </Col>
+               <Col md={6}>
+                    <img className='img-fluid' src={pic} alt="" />
+               </Col>
+          </Row>
+         
      );
 };
 
