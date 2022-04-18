@@ -1,6 +1,4 @@
 import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import Student from '../Student/Student';
 import './Service.css';
 
@@ -22,7 +20,7 @@ const Service = () => {
       mobile: '021234354545'
     }}
   
-  ]
+  ];
      return (
         <div>
           <h3 className=' py-4 text-center'>All Student here </h3>

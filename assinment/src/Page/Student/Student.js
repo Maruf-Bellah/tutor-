@@ -1,9 +1,11 @@
-import React, { createContext } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Student.css';
  export const DetailsContext = createContext('');
 
 const Student = ({student}) => {
+
+
      const {people, post , img} = student;
 
      const navigate = useNavigate();
@@ -14,7 +16,7 @@ const Student = ({student}) => {
           navigate(`/service/${img}`)
      }
      return (
-          <div className='container'>
+          <div className=''>
               <DetailsContext.Provider value='maruf'>
               <div className="student">
                     <img src={img} alt="" />

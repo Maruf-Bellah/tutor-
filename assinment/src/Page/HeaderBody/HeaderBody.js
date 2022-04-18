@@ -1,9 +1,10 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import './HeaderBody.css';
-import pic1 from './slider-4.jpg';
+ import pic1 from './slider-4.jpg';
 import pic2 from './slider-2.jpg';
 import pic3 from './slider-1.jpg';
+
 
 const HeaderBody = () => {
      return (

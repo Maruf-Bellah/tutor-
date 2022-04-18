@@ -31,19 +31,21 @@ const Header = () => {
         {/* <Nav.Link as={Link} to="/">Home</Nav.Link> */}
 
       <Nav
-        className="ms-auto my-3 my-lg-0"
+        className="ms-auto my-3 text-center my-lg-0"
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-{  user ? 
+
+
+      <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
+        <Nav.Link as={Link} to="/about" >
+          About
+        </Nav.Link>
+        {  user ? 
      <button className='btn btn-link text-decoration-none' onClick={handleSignOut}>Sign Out</button>
      :
 
-<Nav.Link as={Link} to="/blog">Blog</Nav.Link>}
-<Nav.Link as={Link} to="/about">About</Nav.Link>
-        <Nav.Link as={Link} to="/login" >
-          Login
-        </Nav.Link>
+<Nav.Link as={Link} to="/log">Blog</Nav.Link>}
       </Nav>
     </Navbar.Collapse>
   </Container>

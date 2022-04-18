@@ -1,51 +1,85 @@
 import React from 'react';
 import { Carousel, Col, Row } from 'react-bootstrap';
-import pic1 from './Exams-rafiki.png';
-import pic2 from './Lesson-rafiki.png';
-import pic3 from './Reading glasses.gif';
-import './Slider.css'
+import './Slider.css';
+import pik1 from './ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg'
+import pik2 from './lucas-lenzi-b5zPZ8_7vhw-unsplash.jpg'
+import pik3 from './jeswin-thomas-wRdYnqXtyYk-unsplash.jpg'
+ import pik4 from './joseph-gonzalez-iFgRcqHznqg-unsplash.jpg'
+import pik5 from './lucas-lenzi-b5zPZ8_7vhw-unsplash.jpg'
+import pik6 from './nicolas-horn-MTZTGvDsHFY-unsplash.jpg' 
 
 
 const Slider = () => {
      return (
-      <div className='bg-primary' style={{height: '500px'}}>
+        <div>
+          <h2 className='text-primary text-center mt-4'>successfull students</h2>
+              
+      <div className='bg-light container my-5' style={{height: '500px'}}>
         <Carousel>
   <Carousel.Item>
-    <img  style={{height: '200px'}}
-      className="d-block w-25 mx-auto"
-      src="https://secure.gravatar.com/avatar/869616d65d78a6cf40fd39a6ed8a1f07?s=32&d=mm&r=g"
+      <div className="slider-img">
+      <img
+      className="d-block  mx-auto"
+      src={pik1}
       alt="First slide"
     />
- 
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+     <div className='text-center'>
+       <h3>first slide label</h3>
+         <p >Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+
 
   </Carousel.Item>
-  <Carousel.Item>
-    <img  style={{height: '200px'}}
-      className="d-block w-25 mt-5  mx-auto"
-      src="https://secure.gravatar.com/avatar/75ec18a5bf959aab895830be3a78cb34?s=50&d=mm&r=g"
-      alt="Second slide"
-    />
 
- 
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-  </Carousel.Item>
   <Carousel.Item>
-    <img style={{height: '200px'}}
-      className="d-block w-25 mx-auto"
-      src="https://secure.gravatar.com/avatar/75ec18a5bf959aab895830be3a78cb34?s=50&d=mm&r=g"
+      <div className="slider-img">
+      <img 
+      className="d-block  mx-auto"
+      src={pik4}
       alt="Third slide"
     />
-
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    <div className='text-center'>
+    <h3>Third slide label</h3>
+      <p >Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
   
+    </div>
+   
+  </Carousel.Item>
+  <Carousel.Item>
+      <div className="slider-img">
+      <img 
+      className="d-block  mx-auto"
+      src={pik6}
+      alt="fourth slide"
+    />
+      </div>
+    <div className='text-center'>
+    <h3>fourth slide label</h3>
+      <p >Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+  
+    </div>
+   
+  </Carousel.Item>
+  <Carousel.Item>
+      <div className="slider-img">
+      <img 
+      className="d-block  mx-auto"
+      src={pik5}
+      alt="fivth slide"
+    />
+      </div>
+    <div className='text-center'>
+    <h3>fivth slide label</h3>
+      <p >Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+  
+    </div>
+   
   </Carousel.Item>
 </Carousel>
       </div>
+        </div>
      );
 };
 
