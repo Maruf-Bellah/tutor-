@@ -9,28 +9,28 @@ const SocilalLogin = () => {
      const navigate = useNavigate()
 
      const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-     
-     let errorElement ;
-     if (error) {
-           errorElement = <p className='text-danger'>Error: {error.message}</p>
-        }
 
-        if(user){
-             navigate('/home')
-        }
+     let errorElement;
+     if (error) {
+          errorElement = <p className='text-danger'>Error: {error.message}</p>
+     }
+
+     if (user) {
+          navigate('/home')
+     }
      return (
           <div className='mt-2'>
-                 {errorElement}
-    
-          <button 
-          onClick={() => signInWithGoogle ()}
-          className='btn d-flex align-items-center justify-content-center btn-outline-primary mt-2 w-50'>
-          <img src={logo} alt="" />
-            <span className='d-none d-md-block'> Google Sign in</span>
-          </button>
+               {errorElement}
 
-        
-          
+               <button
+                    onClick={() => signInWithGoogle()}
+                    className='btn d-flex align-items-center justify-content-center btn-outline-primary mt-2 w-100'>
+                    <img src={logo} alt="" />
+                    <span className='d-none d-md-block'> Google Sign in</span>
+               </button>
+
+
+
           </div>
      );
 };

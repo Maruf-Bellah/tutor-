@@ -25,30 +25,30 @@ const Login = () => {
           user,
           loading,
           error,
-        ] = useSignInWithEmailAndPassword(auth);
+     ] = useSignInWithEmailAndPassword(auth);
 
-        const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-        const resetPassword = async() =>{
+     const resetPassword = async () => {
           const email = emailRef.current.value;
 
           // await sendPasswordResetEmail(email);
           // toast('Sent email');
-          if(email){
+          if (email) {
                await sendPasswordResetEmail(email);
                toast('Sent email');
           }
-          else{
+          else {
                toast('Plese Enter your email')
           }
      }
 
 
-        if(loading){
-             <Loading></Loading>
-        }
+     if (loading) {
+          <Loading></Loading>
+     }
 
-     const handleSubmitLogin = event =>{
+     const handleSubmitLogin = event => {
           event.preventDefault();
           const email = emailRef.current.value;
           const password = passwordRef.current.value;
@@ -56,62 +56,63 @@ const Login = () => {
      }
 
 
-     if(user){
+     if (user) {
           navigate(from, { replace: true })
           // navigate('/home');
      }
      let errorElement;
-        if (error) {
-            errorElement = <p className='text-danger'>Error: {error.message}</p>
-        }
+     if (error) {
+          errorElement = <p className='text-danger'>Error: {error.message}</p>
+     }
 
      return (
-          <Row className='container d-flex align-items-center mx-auto justify-content-center login'>
-               <h2 style={{fontWeight: 'bold'}} className='text-center text-primary'>Please Login My Website</h2>
-               <Col md={6} >
-               <div className='w-100'>
-     
-<Form onSubmit={handleSubmitLogin}>
-  <Form.Group className="mb-3" controlId="formBasicEmail">
+          <div className='py-5'>
+               <Row className='container my-5 d-flex align-items-center mx-auto justify-content-center login'>
+                    <h2 style={{ fontWeight: 'bold' }} className='text-center text-primary'>Please Login My Website</h2>
+                    <Col md={6} >
+                         <div className='w-100 card p-5 shadow-lg'>
 
-    <Form.Control ref={emailRef} type="email" required placeholder="Enter email" />
-  </Form.Group>
+                              <Form onSubmit={handleSubmitLogin}>
+                                   <Form.Group className="mb-3 " controlId="formBasicEmail">
+                                        <Form.Control ref={emailRef} type="email" required placeholder="Enter email" />
+                                   </Form.Group>
 
-  <Form.Group className="mb-3" controlId="formBasicPassword">
+                                   <Form.Group className="mb-3 py-2" controlId="formBasicPassword">
+                                        <Form.Control ref={passwordRef} type="password" required placeholder="Password" />
 
-    <Form.Control ref={passwordRef} type="password" required placeholder="Password" />
+                                   </Form.Group>
+                                   {errorElement}
+                                   <Button className='w-100 py-2' onClick={() => signInWithEmailAndPassword()} variant="primary" type="submit">
+                                        Login
+                                   </Button>
 
-  </Form.Group>
-          {errorElement}
-  <Button className='w-50' onClick={() => signInWithEmailAndPassword()} variant="primary" type="submit">
-    Login
-  </Button> 
+                                   <div>
+                                        <small> <span>  Are you want to read ?</span> </small>
+                                        <Link to='/register' className='text-decoration-none'>
+                                             <button className='btn btn-link text-decoration-none'><small>Please Regiser</small></button>
+                                        </Link>
 
- <div>
- <span>  Are you want to read ?</span> 
-  <Link to='/register' className='text-decoration-none'>
-  <button className='btn btn-link text-decoration-none'>Please Regiser</button>
- </Link>
- </div>
+                                   </div>
 
- <div>
- <span>  Forget your Password?</span> 
+                                   <div>
+                                        <small>  <span>  Forget your Password?</span> </small>
 
-  <button  className='btn btn-link text-decoration-none ' onClick={resetPassword}>Reset Password</button>
+                                        <button className='btn btn-link text-decoration-none ' onClick={resetPassword}><small>Reset Password</small></button>
 
- </div>
-</Form>
+                                   </div>
+                              </Form>
 
-<SocilalLogin></SocilalLogin>
-<ToastContainer />
+                              <SocilalLogin></SocilalLogin>
+                              <ToastContainer />
 
+                         </div>
+                    </Col>
+                    <Col md={6}>
+                         <img className='img-fluid' src={pic} alt="" />
+                    </Col>
+               </Row>
           </div>
-               </Col>
-               <Col md={6}>
-                    <img className='img-fluid' src={pic} alt="" />
-               </Col>
-          </Row>
-         
+
      );
 };
 

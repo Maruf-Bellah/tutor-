@@ -1,11 +1,11 @@
 import React from 'react';
-import {Col, Row } from 'react-bootstrap';
-import pic from './268045983_318359796863863_1466584361786568245_n-removebg-preview.png';
+import { Col, Row } from 'react-bootstrap';
+import pic from './a451393c169a91586312551109361064.gif';
 import './About.css';
 
 const About = () => {
      return (
-          <div className='container '>
+          <div className='px-4 py-5 my-5 '>
                <Row className=' about d-flex align-items-center'>
                     <Col md={6}>
                          <h2>About me...........</h2>

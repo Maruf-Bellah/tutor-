@@ -10,7 +10,7 @@ import pic from './postattendee-demo.gif';
 
 
 const Register = () => {
-    
+
 
      const emailRef = useRef('');
      const passwordRef = useRef('');
@@ -18,17 +18,17 @@ const Register = () => {
      const [
           createUserWithEmailAndPassword,
           user,
-         
-     ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+
+     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
      const navigate = useNavigate()
 
 
-     if(user) {
-         navigate('/home')
-        }
+     if (user) {
+          navigate('/home')
+     }
 
 
-        
+
 
      const handleSubmitRegister = event => {
           event.preventDefault();
@@ -40,52 +40,54 @@ const Register = () => {
 
      return (
 
+          <div className='py-5'>
                <Row className='container mx-auto register'>
-                    <h2 style={{fontWeight: 'bold'}} className='text-center text-primary mt-5'>Plese Register My Website</h2>
-          
+                    <h2 style={{ fontWeight: 'bold' }} className='text-center text-primary mt-5'>Plese Register My Website</h2>
+
                     <Col md={6}>
-                    <div className='w-100 '>
-              
-               <Form onSubmit={handleSubmitRegister}>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                         <div className='w-100 card p-5 shadow-lg'>
 
-                         <Form.Control ref={emailRef} type="email" required placeholder="Enter email" />
-                    </Form.Group>
+                              <Form onSubmit={handleSubmitRegister}>
+                                   <Form.Group className="mb-3" controlId="formBasicEmail">
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                      
-                         <Form.Control ref={passwordRef} type="password" required placeholder="Password" />
-                    </Form.Group>
+                                        <Form.Control ref={emailRef} type="email" required placeholder="Enter email" />
+                                   </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                      
-                         <Form.Control ref={passwordRef} type="password" required placeholder=" Password" />
-                    </Form.Group>
-                     <Form.Group></Form.Group>
-                         <br />
+                                   <Form.Group className="mb-3" controlId="formBasicPassword">
 
-                      
+                                        <Form.Control ref={passwordRef} type="password" required placeholder="Password" />
+                                   </Form.Group>
 
-                    <Button className='w-50' variant="primary" type="submit"
-                         onClick={() => createUserWithEmailAndPassword()}
-                    >
-                         Register
-                    </Button>
-                    <br />
-                    <span className='mt-1'>If you are Registered</span>
-                         <Link to='/login' className='text-decoration-none'>
-                          <button className='btn btn-link text-decoration-none'>Please Login</button>
-                         </Link>
-               </Form>
-               <SocilalLogin></SocilalLogin>
+                                   <Form.Group className="mb-3" controlId="formBasicPassword">
 
-          </div>
+                                        <Form.Control ref={passwordRef} type="password" required placeholder=" Password" />
+                                   </Form.Group>
+                                   <Form.Group></Form.Group>
+                                   <br />
+
+
+
+                                   <Button className='w-100 py-2' variant="primary" type="submit"
+                                        onClick={() => createUserWithEmailAndPassword()}
+                                   >
+                                        Register
+                                   </Button>
+                                   <br />
+                                   <span className='mt-1'>If you are Registered</span>
+                                   <Link to='/login' className='text-decoration-none'>
+                                        <button className='btn btn-link text-decoration-none'>Please Login</button>
+                                   </Link>
+                              </Form>
+                              <SocilalLogin></SocilalLogin>
+
+                         </div>
                     </Col>
                     <Col md={6}>
                          <img className='img-fluid' src={pic} alt="" />
                     </Col>
                </Row>
-       
+          </div>
+
      );
 };
 
